@@ -1,0 +1,15 @@
+Einleitung/Vorstellung/Kurze Definition F
+Warum nötig/Beispiel für Verwendung J
+
+Bestandteile:
+  Netzwerkprotokoll J
+  Javascript Client-API F
+
+Implementierungen/Technologien:
+  node.js F
+  PHP J
+
+Zusammenfassung F
+
+Quellen:
+http://www.heise.de/developer/artikel/WebSocket-Annaeherung-an-Echtzeit-im-Web-1260189.html

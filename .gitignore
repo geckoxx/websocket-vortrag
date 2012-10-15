@@ -1,0 +1,7 @@
+beamer/*.log
+beamer/*.toc
+beamer/*.aux
+beamer/*.nav
+beamer/*.out
+beamer/*.synctex.gz
+beamer/*.snm
