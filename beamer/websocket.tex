@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{subfigure}
 \author{Johannes Hackel\and Falco Prescher}
 \title{WebSocket}
 
@@ -31,11 +32,42 @@
 \section{Warum?}
 \begin{frame}
 \frametitle{Warum?}
+
+\begin{itemize}
+\item immer mehr Anwendungen durch Webtechnologien
+\item fehlende Echtzeit
+\item vorher durch Polling/Long Polling
+\item führt zu viel Overhead und Netzwerkauslastung
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Polling/Long Polling}
+\begin{figure}
+\subfigure{\includegraphics[width=5cm]{polling.png}}
+\subfigure{\includegraphics[width=5cm]{long_polling.png}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\begin{center}
+\includegraphics[width=12cm]{poll-ws-compare.png}
+\end{center}
+\end{figure}
 \end{frame}
 
 \section{Verwendungen}
 \begin{frame}
 \frametitle{Verwendungen}
+\begin{itemize}
+\item Facebook, Twitter
+\item Chats
+\item kollaborative Websites (etherpad)
+\item Spiele auf HTML5-Basis
+\end{itemize}
 \end{frame}
 
 \section{Bestandteile}
@@ -52,11 +84,6 @@
 \framesubtitle{Javascript Client-API}
 \end{frame}
 
-\begin{frame}
-\frametitle{Bestandteile}
-\framesubtitle{Netzwerkprotokoll}
-\end{frame}
-
 \section{Implementierungen/Technologien}
 \begin{frame}
 \frametitle{Implementierungen/Technologien}
@@ -70,6 +97,10 @@
 \section{Quellen}
 \begin{frame}
 \frametitle{Quellen}
+\begin{itemize}
+\item http://www.heise.de/developer/artikel/WebSocket-Annaeherung-an-Echtzeit-im-Web-1260189.html
+\item http://www.websocket.org
+\end{itemize}
 \end{frame}
 
 \end{document}
