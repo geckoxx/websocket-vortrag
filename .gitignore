@@ -5,3 +5,4 @@ beamer/*.nav
 beamer/*.out
 beamer/*.synctex.gz
 beamer/*.snm
+beamer/websocket.pdf
