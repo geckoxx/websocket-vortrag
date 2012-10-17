@@ -74,8 +74,57 @@
 
 \subsection{Netzwerkprotokoll}
 \begin{frame}
+\begin{figure}[htbp]
 \frametitle{Bestandteile}
 \framesubtitle{Netzwerkprotokoll}
+\begin{minipage}[t]{5cm}
+\vspace{0pt}
+\begin{itemize}
+\item Standard-HTTP-Ports 80 und 443
+\item auch durch Firewalls hinweg
+\item Verbindungsaufbau durch WebSocket Protocol Handshake
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{6cm}
+\vspace{0pt}
+\includegraphics[width=6cm]{WebSocket.png}
+\end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Verbindungsaufbau}
+\framesubtitle{Client}
+GET /chatService HTTP/1.1\\
+Host: server.example.com\\
+Upgrade: websocket\\
+Connection: Upgrade\\
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\\
+Sec-WebSocket-Origin: http://example.com\\
+Sec-WebSocket-Protocol: chat, superchat\\
+Sec-WebSocket-Version: 8 \\
+\end{frame}
+
+\begin{frame}
+\frametitle{Verbindungsaufbau}
+\framesubtitle{Server}
+HTTP/1.1 101 Switching Protocols\\
+Upgrade: websocket\\
+Connection: Upgrade\\
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=\\
+Sec-WebSocket-Protocol: superchat\\
+\end{frame}
+
+\begin{frame}
+\frametitle{WebSocket Protocol}
+\begin{itemize}
+\item geringer Overhead (zwei Byte)
+\item Begin: 0x00
+\item Ende: OxFF
+\item Daten in UTF-8
+\item Beispiel: \textbackslash 0x00Hello, WebSocket\textbackslash 0xff
+\end{itemize}
 \end{frame}
 
 \subsection{Javascript Client-API}
@@ -87,6 +136,16 @@
 \section{Implementierungen/Technologien}
 \begin{frame}
 \frametitle{Implementierungen/Technologien}
+\framesubtitle{Server}
+\begin{itemize}
+\item Apache httpd (via "mod\_pywebsocket")
+\item Jetty
+\item jWebSocket
+\item Kaazing WebSocket Gateway
+\item Oracle Glassfish 3.1
+\item Netty Project
+\item Node.js/Socket.io
+\end{itemize}
 \end{frame}
 
 \section{Zusammenfassung}
