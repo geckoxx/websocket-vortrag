@@ -135,7 +135,7 @@ Sec-WebSocket-Protocol: superchat\\
 \begin{frame}
 \frametitle{Erstellung der Websocketverbindung vom Client zum Server}
 \begin{itemize}
-\item // Erstelle neuen Websocket \\
+\item // Erstelle neuen Verbindung mit dem Websocket-Server \\
 var mySocket = new WebSocket("ws://echo.websockets.org:port");
 \end{itemize}
 \end{frame}
@@ -143,7 +143,7 @@ var mySocket = new WebSocket("ws://echo.websockets.org:port");
 \begin{frame}
 \frametitle{Ereignisbehandlung}
 \begin{itemize}
-\item // Anfügen von "listeners" an dem Websocket \\
+\item // Anfügen von Eventlisteners an dem Websocket \\
 	mySocket.onmessage = \\function(event) \{ alert("Der Server sagt: " + event.data); \}; \\
 mySocket.onopen = function(event) \{...\}; \\
 mySocket.onclose = function(event) \{...\}; \\
