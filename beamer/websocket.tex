@@ -24,24 +24,37 @@
 \tableofcontents
 \end{frame}
 
-\section{Definition}
+\section{Allgemeines zu Websockets}
 \begin{frame}
-\frametitle{Definition}
+\frametitle{Allgemeines zu Websockets}
+\begin{itemize}
+\item Unterstützung von Vollduplexkommunikation über eine TCP-Verbindung
+\item Transmission Control Protokoll (TCP) = verbindungsorientiertes, zuverlässiges und paketvermitteltes Transportprotokoll
+\item Ermöglichung einer bidirektionalen Kommunktion zur Realisierung von Datenaustausch in Computernetzwerken
+\end{itemize}
 \end{frame}
 
-\section{Warum?}
+\section{Verwendungen der Websockets}
 \begin{frame}
-\frametitle{Warum?}
+\frametitle{Verwendungen der Websockets}
+\begin{itemize}
+\item Facebook, Twitter
+\item Chats
+\item kollaborative Websites (etherpad)
+\item Spiele auf HTML5-Basis
+\end{itemize}
+\end{frame}
 
+\section{Gründe zur Verwendung von Websockets}
+\begin{frame}
+\frametitle{Gründe zur Verwendung von Websockets}
 \begin{itemize}
 \item immer mehr Anwendungen durch Webtechnologien
 \item fehlende Echtzeit
 \item vorher durch Polling/Long Polling
 \item führt zu viel Overhead und Netzwerkauslastung
 \end{itemize}
-
 \end{frame}
-
 
 \begin{frame}
 \frametitle{Polling/Long Polling}
@@ -57,17 +70,6 @@
 \includegraphics[width=12cm]{poll-ws-compare.png}
 \end{center}
 \end{figure}
-\end{frame}
-
-\section{Verwendungen}
-\begin{frame}
-\frametitle{Verwendungen}
-\begin{itemize}
-\item Facebook, Twitter
-\item Chats
-\item kollaborative Websites (etherpad)
-\item Spiele auf HTML5-Basis
-\end{itemize}
 \end{frame}
 
 \section{Bestandteile}
@@ -127,13 +129,13 @@ Sec-WebSocket-Protocol: superchat\\
 \end{itemize}
 \end{frame}
 
-\subsection{Javascript Client-API}
+\subsection{Standardisierte Javascript Client-API für Websockets}
 \begin{frame}
 \frametitle{Bestandteile}
 \framesubtitle{Javascript Client-API}
 \end{frame}
 
-\section{Implementierungen/Technologien}
+\section{Technologien zur Anwendung von Websockets}
 \begin{frame}
 \frametitle{Implementierungen/Technologien}
 \framesubtitle{Server}
@@ -148,16 +150,17 @@ Sec-WebSocket-Protocol: superchat\\
 \end{itemize}
 \end{frame}
 
-\section{Zusammenfassung}
-\begin{frame}
-\frametitle{Zusammenfassung}
-\end{frame}
-
 \section{Quellen}
 \begin{frame}
 \frametitle{Quellen}
 \begin{itemize}
+\item http://www.entwickler.de/zonen/portale/psecom,id,101,online,5134,neu,1.html
 \item http://www.heise.de/developer/artikel/WebSocket-Annaeherung-an-Echtzeit-im-Web-1260189.html
+\item http://www.nodejs.org/
+\item http://www.socket.io/
+\item http://www.stackoverflow.com/questions/10805335/facebook-and-socket-io-node-js
+\item http://www.tools.ietf.org/html/rfc6455
+\item http://www.w3.org/TR/2011/WD-websockets-20110419/
 \item http://www.websocket.org
 \end{itemize}
 \end{frame}
