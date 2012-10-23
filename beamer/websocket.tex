@@ -6,11 +6,11 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{subfigure}
-\author{Johannes Hackel\and Falco Prescher}
+\author{Johannes Hackel und Falco Prescher}
 \title{WebSocket}
 
 \usetheme{Ilmenau}
-\useoutertheme{infolines}
+\useoutertheme{split}
 \usecolortheme{rose}
 
 \begin{document}
@@ -28,9 +28,11 @@
 \begin{frame}
 \frametitle{Allgemeines zu Websockets}
 \begin{itemize}
-\item Unterstützung von Vollduplexkommunikation über eine TCP-Verbindung
+\item Unterstützung von Vollduplexkommunikation über ein TCP basierendes Netwerkprotokoll (IETF-Standard \footnote{\tiny{Internet Engineering Task Force (IETF) http://tools.ietf.org/html/rfc6455}})
 \item Transmission Control Protokoll (TCP) = verbindungsorientiertes, zuverlässiges und paketvermitteltes Transportprotokoll
 \item Ermöglichung einer bidirektionalen Kommunktion zur Realisierung von Datenaustausch in Computernetzwerken
+\item Konzipiert für die Implementation in Webbrowsern und Webservern
+\item Lieferung einer API für JavaScript (W3C Standard \footnote{\tiny{World Wide Web Consortium (W3C) http://www.w3.org/TR/2011/WD-websockets-20110419/}})
 \end{itemize}
 \end{frame}
 
@@ -72,7 +74,7 @@
 \end{figure}
 \end{frame}
 
-\section{Bestandteile}
+\section{Bestandteile der Websockets}
 
 \subsection{Netzwerkprotokoll}
 \begin{frame}
@@ -129,10 +131,34 @@ Sec-WebSocket-Protocol: superchat\\
 \end{itemize}
 \end{frame}
 
-\subsection{Standardisierte Javascript Client-API für Websockets}
+\subsection{Standardisierte JavaScript Client-API für Websockets}
 \begin{frame}
-\frametitle{Bestandteile}
-\framesubtitle{Javascript Client-API}
+\frametitle{Erstellung der Websocketverbindung vom Client zum Server}
+\begin{itemize}
+\item // Erstelle neuen Websocket \\
+var mySocket = new WebSocket("ws://echo.websockets.org:port");
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ereignisbehandlung}
+\begin{itemize}
+\item // Anfügen von "listeners" an dem Websocket \\
+	mySocket.onmessage = \\function(event) \{ alert("Der Server sagt: " + event.data); \}; \\
+mySocket.onopen = function(event) \{...\}; \\
+mySocket.onclose = function(event) \{...\}; \\
+mySocket.onerror = function(event) \{...\}; \\
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kommunikation mit dem Webserver}
+\begin{itemize}
+\item // Senden von Daten zum Server \\
+mySocket.send("Hallo Server!"); \\
+\item // Schließen des Websockets \\
+mySocket.close(); \\
+\end{itemize}
 \end{frame}
 
 \section{Technologien zur Anwendung von Websockets}
@@ -150,7 +176,7 @@ Sec-WebSocket-Protocol: superchat\\
 \end{itemize}
 \end{frame}
 
-\section{Quellen}
+\begin{appendix}
 \begin{frame}
 \frametitle{Quellen}
 \begin{itemize}
@@ -164,5 +190,6 @@ Sec-WebSocket-Protocol: superchat\\
 \item \url{http://www.websocket.org}
 \end{itemize}
 \end{frame}
+\end{appendix}
 
 \end{document}

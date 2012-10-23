@@ -1,15 +1,11 @@
-Einleitung/Vorstellung/Kurze Definition F
-Warum nötig/Beispiel für Verwendung J
-
-Bestandteile:
-  Netzwerkprotokoll J
-  Javascript Client-API F
-
-Implementierungen/Technologien:
-  node.js F
-  PHP J
-
-Zusammenfassung F
-
-Quellen:
-http://www.heise.de/developer/artikel/WebSocket-Annaeherung-an-Echtzeit-im-Web-1260189.html
+﻿1. Allgemeines zu Websockets (Falco)
+2. Verwendungen der Websockets (Johannes)
+3. Gründe zur Verwendung von Websockets (Johannes)
+4. Bestandteile der Websockets
+   - Netzwerkprotokoll (Johannes)
+   - Standardisierte JavaScript Client-API für Websockets (Falco)
+5. Technologien zur Anwendung von Websockets (Falco)
+Beispiele zu Websocktes
+- NodeJS-Chat (Falco)
+- PHP-Beispiel (Johannes)
+Zusammenfassung (Falco)
